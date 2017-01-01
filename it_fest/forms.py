@@ -10,5 +10,4 @@ class ParticipantForm(forms.ModelForm):
 class RegistrationForm(forms.ModelForm):
 	class Meta:
 		model = Registration
-		fields = '__all__'
-		
+		exclude = ['payment_status']

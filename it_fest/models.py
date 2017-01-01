@@ -4,10 +4,13 @@ from django.db import models
 
 # Create your models here.
 class Registration(models.Model):
-	GAME_CHOICE = (('Call Of Duty 4','Call Of Duty 4'),
-		('Fifa 17', 'Fifa 17'),
-		('NFS Most Wanted', 'NFS Most Wanted'),)
+	GAME_CHOICE = (('cod','Call of Duty 4'),
+		('fifa', 'Fifa 17'),
+		('nfsmw', 'NFS Most Wanted'),)
+	STATUS = (('pending','Pending'),
+		('verified', 'Verified'),)
 	game_name = models.CharField(max_length=15, choices=GAME_CHOICE)
+	payment_status = models.CharField(max_length=15, choices=STATUS)
 	transaction_id = models.BigIntegerField()
 	bkash_mobile_number = models.CharField(max_length=14)
 
@@ -21,6 +24,6 @@ class Participant(models.Model):
 	mobile_number = models.CharField(max_length=14)
 	institute = models.CharField(max_length=100)
 
+
 	def __unicode__(self):
 		return self.full_name
-		
