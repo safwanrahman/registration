@@ -24,7 +24,8 @@ class Migration(migrations.Migration):
             name='Registration',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('game_name', models.CharField(max_length=15, choices=[('Call Of Duty 4', 'Call Of Duty 4'), ('Fifa 17', 'Fifa 17'), ('NFS Most Wanted', 'NFS Most Wanted')])),
+                ('game_name', models.CharField(max_length=15, null=True, choices=[('cod', 'Call of Duty 4'), ('fifa', 'Fifa 17'), ('nfsmw', 'NFS Most Wanted')])),
+                ('payment_status', models.CharField(default='pending', max_length=15, choices=[('pending', 'Pending'), ('verified', 'Verified')])),
                 ('transaction_id', models.BigIntegerField()),
                 ('bkash_mobile_number', models.CharField(max_length=14)),
             ],

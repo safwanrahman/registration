@@ -9,8 +9,8 @@ class Registration(models.Model):
 		('nfsmw', 'NFS Most Wanted'),)
 	STATUS = (('pending','Pending'),
 		('verified', 'Verified'),)
-	game_name = models.CharField(max_length=15, choices=GAME_CHOICE)
-	payment_status = models.CharField(max_length=15, choices=STATUS)
+	game_name = models.CharField(max_length=15, choices=GAME_CHOICE, null=True)
+	payment_status = models.CharField(max_length=15, choices=STATUS, default='pending')
 	transaction_id = models.BigIntegerField()
 	bkash_mobile_number = models.CharField(max_length=14)
 
