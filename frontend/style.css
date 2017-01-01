@@ -1,0 +1,21 @@
+	body{
+		background: url(img/bg1.png);
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+
+	.confo{
+		margin-bottom: 40px;
+	}
+
+	.logos{
+		margin-bottom: 30px;
+	}
+
+	.info{
+		margin-bottom: 20px;
+	}
+
+	.form-control{
+		margin-bottom: 10px;
+	}
