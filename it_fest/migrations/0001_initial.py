@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
             name='Registration',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('game_name', models.CharField(max_length=1, choices=[('Call Of Duty 4', 'Call Of Duty 4'), ('Fifa 17', 'Fifa 17'), ('NFS Most Wanted', 'NFS Most Wanted')])),
+                ('game_name', models.CharField(max_length=15, choices=[('Call Of Duty 4', 'Call Of Duty 4'), ('Fifa 17', 'Fifa 17'), ('NFS Most Wanted', 'NFS Most Wanted')])),
                 ('transaction_id', models.BigIntegerField()),
                 ('bkash_mobile_number', models.CharField(max_length=14)),
             ],
@@ -32,6 +32,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='participant',
             name='registration',
-            field=models.ForeignKey(to='it_fest.Registration'),
+            field=models.ForeignKey(to='it_fest.Registration', null=True),
         ),
     ]

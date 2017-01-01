@@ -16,3 +16,4 @@ def register(request):
 		'registration_form' : registration_form, }
 
 	return render(request, 'register.html', context )
+	
