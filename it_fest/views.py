@@ -6,11 +6,9 @@ def register(request):
 	participation_form = ParticipantForm(request.POST)
 	registration_form = RegistrationForm(request.POST)
 
-	if registration_form.is_valid():
-		registration_form.save()
-
-	if participation_form.is_valid():
-		participation_form.save()
+	if registration_form.is_valid() and participation_form.is_valid():
+		registration = registration_form.save()
+		participation_form.save(registration=registration)
 
 	context = { 'participation_form' : participation_form,
 		'registration_form' : registration_form, }
