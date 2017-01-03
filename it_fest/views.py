@@ -15,4 +15,4 @@ def register(request):
 	context = { 'participation_form' : participation_form,
 		'registration_form' : registration_form, }
 
-	return render(request, 'register.html', context )
+	return render(request, './register.html', context )

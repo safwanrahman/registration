@@ -1,0 +1,6 @@
+*.pyc
+*.pyo
+/static
+*.less.css
+db.sqlite3
+venv/
