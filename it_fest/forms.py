@@ -10,4 +10,4 @@ class ParticipantForm(forms.ModelForm):
 class RegistrationForm(forms.ModelForm):
 	class Meta:
 		model = Registration
-		exclude = ['payment_status']
+		exclude = ['payment_status', 'game_name']

@@ -1,10 +1,10 @@
-{% load bootstrap3 %}
 {% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>FIFA - 2nd ACC IT Carnival</title>
+	<title>Adamjee Cantonment College IT Club</title>
+
 	<!-- Start: Meta Tags -->
 	<meta name="viewport" content="wforth=device-wforth, initial-scale=1">
 	<!-- End: Meta Tags -->
@@ -24,15 +24,17 @@
 
 
 
+
+
 <body>
 
-	<div class="container">
+	<div class="container"> 
 
 
 		<div class="col-md-6 col-md-offset-3">
 
 
-			<!-- Logos -->
+			<!-- Logos -->		
 			<div class="col-xs-6 logos">
 				<img class="img-responsive "  src="{% static 'img/acc_logo.png' %}">
 			</div>
@@ -45,44 +47,16 @@
 
 			<!-- Info -->
 			<div class="info">
-				<h1>{{ game_name }} - 2nd ACC IT Carnival</h1><br>
-				This form is for registration only.
-				For more information please visit our <a href="https://goo.gl/CpHwbF">Event Page</a>. <br><br>
-
-				Please Fill Out The Following Form : <br><br>
-				*All The FIelds Are Required*
+				<h1 class="confo">{{ game_name }} - 2nd ACC IT Carnival</h1>
+				<h3>You have been successfully registered. Please wait for the confirmation message in Email and Phone.</h3>
 			</div>
-			<!-- /Info -->
-
-			<form class="form-horizontal"  method="post">
-                {% csrf_token %}
-
-
-				<!-- Universal Details -->
-				<div class="form-group">
-
-				  {% bootstrap_form participation_form %}
-                </div>
-				<!-- /1st Participant Details -->
-
-				<!-- bKash Details -->
-				<div class="form-group">
-
-				{% bootstrap_form registration_form %}
-
-				</div>
-				<!-- /bKash Details -->
-
-				<div class="form-group">
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-				</div>
-
-			</form>
+			<!-- /Info -->		
 
 		</div>
 
 	</div>
 
-
 </body>
+
 </html>
+

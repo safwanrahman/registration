@@ -20,5 +20,5 @@ from it_fest import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^register/$', views.register, name='register'),
+    url(r'^register/(?P<game>[^/]+)', views.register, name='register'),
 ]
