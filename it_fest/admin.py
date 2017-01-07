@@ -10,7 +10,7 @@ class ParticipationAdmin(admin.ModelAdmin):
     list_display = ['full_name', 'mobile_number',
                     'institute', 'get_payment_status']
     list_filter = ['institute']
-    search_fields = ['full_name', 'mobile_number', 'registration_id']
+    search_fields = ['full_name', 'mobile_number', 'registration__id']
 
     def get_payment_status(self, object):
         return object.registration.payment_status
